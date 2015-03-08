@@ -20,9 +20,12 @@ app.get('/zip/:zip', function(req, res) {
       if (!weatherdata) res.status(500).send('data not found');
 
       var parsedData = JSON.parse(weatherdata.text);
+      if (parsedData.current_observation === undefined) return res.status(500).send({msg: 'zip not found'});
+
       var temp = parsedData.current_observation.temp_f;
       var hot = ' and its too warm to store beer outside.';
       var cold = ' and its cold enough to store beer outside.';
+
       if (temp < 50) {
         res.json({
           msg: 'temp in your city is ' + temp + 'F°' + cold
