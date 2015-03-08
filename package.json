@@ -1,0 +1,32 @@
+{
+  "name": "coldenough",
+  "version": "1.0.0",
+  "description": "Find out if its cold enough outside to store your beer.  Node, Express, Superagent, React",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joeelsey/coldenough.git"
+  },
+  "author": "je",
+  "license": "mit",
+  "bugs": {
+    "url": "https://github.com/joeelsey/coldenough/issues"
+  },
+  "homepage": "https://github.com/joeelsey/coldenough",
+  "dependencies": {
+    "express": "^4.12.2",
+    "request": "^2.53.0",
+    "superagent": "^0.21.0"
+  },
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "chai-http": "^1.0.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-simple-mocha": "^0.4.0"
+  }
+}
