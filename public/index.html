@@ -18,7 +18,7 @@
       var ZipCode = this.refs.zip.getDOMNode().value;
         $.ajax({
           type: 'GET',
-          dataType: 'text',
+          dataType: 'json',
           url: this.props.source + ZipCode,
           success: function(data) {
             this.setState({data: data});
@@ -29,7 +29,7 @@
     },
 
     getInitialState: function() {
-      return {data: {}};
+      return {data: null};
     },
 
     render: function() {
