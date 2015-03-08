@@ -22,8 +22,6 @@
           url: this.props.source + ZipCode,
           success: function(data) {
             this.setState({data: data});
-            console.log('data:', data);
-            console.log('data state:', this.state.data);
           }.bind(this)
         });
     },
@@ -39,7 +37,7 @@
         <label>Your zip code</label>
           <input type="text" ref="zip"></input>
           <button onClick={self.getTemperature}>submit</button>
-          <div>{this.state.data}</div>
+          <div>{self.state.data}</div>
         </div>
       )
     }
